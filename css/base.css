@@ -133,10 +133,6 @@ a:focus-visible {
   grid-template-areas: 'title title' 'back archive' 'sponsor sponsor' 'hire hire';
 }
 
-.frame #cdawrap {
-  justify-self: start;
-}
-
 .frame a {
   pointer-events: auto;
 }
@@ -471,7 +467,6 @@ main {
     align-content: space-between;
     grid-template-areas: 'title back archive sponsor' 'hire ... ... sub';
   }
-  .frame #cdawrap, 
   .frame__sub {
     justify-self: end;
   }
