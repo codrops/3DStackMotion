@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>3D Stack Motion Effect | Codrops</title>
+		<meta name="description" content="An experimental 3D stack motion animation on scroll." />
+		<meta name="keywords" content="nft card animation, gsap, scroll animation, 3d" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<script>
+			document.documentElement.className = 'js';
+		</script>
+		<script src="//tympanus.net/codrops/adpacks/analytics.js"></script>
+	</head>
+	<body class="loading">
+		<main>
+			<header class="frame">
+				<h1 class="frame__title"><a href="https://tympanus.net/codrops/demos/?tag=3d">#3D</a> <a href="https://tympanus.net/codrops/demos/?tag=stack">#stack</a> Motion Effect on <a href="https://tympanus.net/codrops/demos/?tag=scroll">#Scroll</a> <br>inspired by <a href="https://dribbble.com/shots/23641913-Looksrare-NFT-cards">Looksrare: NFT cards</a></h1> 
+				<a class="frame__back" href="https://tympanus.net/codrops/?p=">Article</a>
+				<a class="frame__archive" href="https://tympanus.net/codrops/demos">All demos</a>
+				<a class="frame__sub" href="https://tympanus.net/codrops/collective/" aria-label="Subcribe to our frontend news">
+					<svg width="136" height="136" viewBox="0 0 136 136">
+						<path d="M126.102 47.94C123.846 49.0894 121.444 49.9281 118.962 50.4333C120.216 54.2766 120.866 58.2909 120.889 62.3333C120.803 68.1325 119.513 73.8505 117.1 79.1246C114.687 84.3988 111.205 89.114 106.873 92.9711C106.494 93.3234 106.19 93.7499 105.982 94.2244C105.774 94.6988 105.666 95.2109 105.665 95.7289V115.902L89.1179 105.362C88.6563 105.07 88.137 104.882 87.5957 104.811C87.0544 104.739 86.504 104.785 85.9823 104.947C80.1597 106.755 74.0971 107.672 68.0001 107.667C38.8357 107.667 15.1112 87.3422 15.1112 62.3333C15.1112 37.3245 38.8357 17 68.0001 17C73.8199 16.9993 79.6093 17.8391 85.189 19.4933C85.4247 16.9852 85.9965 14.5202 86.889 12.1645C80.7519 10.3744 74.393 9.45872 68.0001 9.44446C34.6801 9.44446 7.55566 33.1689 7.55566 62.3333C7.55566 91.4978 34.6801 115.222 68.0001 115.222C74.234 115.215 80.4373 114.351 86.4357 112.653L107.327 125.951C107.897 126.317 108.555 126.523 109.233 126.547C109.91 126.571 110.581 126.412 111.176 126.088C111.771 125.764 112.267 125.285 112.614 124.703C112.96 124.12 113.143 123.455 113.145 122.778V97.3533C117.871 92.8188 121.644 87.3845 124.239 81.3702C126.834 75.356 128.2 68.8834 128.256 62.3333C128.297 57.4523 127.57 52.5952 126.102 47.94Z" />
+						<path d="M113.333 41.5556C123.765 41.5556 132.222 33.0988 132.222 22.6667C132.222 12.2347 123.765 3.77783 113.333 3.77783C102.901 3.77783 94.4443 12.2347 94.4443 22.6667C94.4443 33.0988 102.901 41.5556 113.333 41.5556Z"/>
+					</svg>
+					<div class="modal">
+						<strong>Psst...</strong>🤫 craving the latest in frontend wizardry? 🧙 Subscribe to the <strong>Codrops Collective</strong> for a bi-weekly blast of the best frontend articles, design trends, videos, and demo highlights that'll make your screen pop! 💥 Spice up your inbox with our mix of creativity and must-reads to stay ahead of the curve. 💌
+					</div>
+				</a>
+				<div class="frame__hire">Want magic like this on your website? <a href="mailto:contact@codrops.com">Hire us</a></div>
+			</header>
+			<div class="intro">
+				<h2 class="intro__title">The Next Evolution</h2>
+				<p class="intro__hint">Scroll into the future</p>
+				<div class="grid">
+					<div class="card">
+						<div class="card__img" style="background-image:url(img/1.jpg)"></div>
+						<h3 class="card__title">AI Horizons</h3>
+						<h4 class="card__subtitle">Beyond Human Limits</h4>
+						<span class="card__meta">V1.0</span>
+						<p class="card__description">Explore the future where AI transforms imagination into reality.</p>
+					</div><!-- /card -->
+					<div class="card">
+						<div class="card__img" style="background-image:url(img/2.jpg)"></div>
+						<h3 class="card__title">Tech Odyssey</h3>
+						<h4 class="card__subtitle">Unveiling Tomorrow</h4>
+						<span class="card__meta">V2.0</span>
+						<p class="card__description">Embark on a journey into the realm of cutting-edge technology reshaping our world.</p>
+					</div><!-- /card -->
+					<div class="card">
+						<div class="card__img" style="background-image:url(img/3.jpg)"></div>
+						<h3 class="card__title">Digital Frontiers</h3>
+						<h4 class="card__subtitle">Pushing Boundaries</h4>
+						<span class="card__meta">V3.0</span>
+						<p class="card__description">Enter the realm where innovation meets possibility, shaping the future of humanity.</p>
+					</div><!-- /card -->
+					<div class="card">
+						<div class="card__img" style="background-image:url(img/4.jpg)"></div>
+						<h3 class="card__title">AI Nexus</h3>
+						<h4 class="card__subtitle">Bridging Realms</h4>
+						<span class="card__meta">V4.0</span>
+						<p class="card__description">Dive into the interconnected world of AI, where algorithms shape the future of human experience.</p>
+					</div><!-- /card -->
+					<div class="card">
+						<div class="card__img" style="background-image:url(img/5.jpg)"></div>
+						<h3 class="card__title">AI Innovate</h3>
+						<h4 class="card__subtitle">Pioneering Tomorrow</h4>
+						<span class="card__meta">V5.0</span>
+						<p class="card__description">Join the forefront of AI innovation, where creativity meets computational intelligence to shape a better future.</p>
+					</div><!-- /card -->
+					<div class="card">
+						<div class="card__img" style="background-image:url(img/6.jpg)"></div>
+						<h3 class="card__title">AI Horizons</h3>
+						<h4 class="card__subtitle">Beyond Human Limits</h4>
+						<span class="card__meta">V6.0</span>
+						<p class="card__description">Explore the future where AI transforms imagination into reality.</p>
+					</div><!-- /card -->
+					<div class="card">
+						<div class="card__img" style="background-image:url(img/7.jpg)"></div>
+						<h3 class="card__title">AI Frontier</h3>
+						<h4 class="card__subtitle">Exploring New Horizons</h4>
+						<span class="card__meta">V7.0</span>
+						<p class="card__description">Venture into uncharted territories where AI blazes trails towards unprecedented possibilities.</p>
+					</div><!-- /card -->
+					<div class="card">
+						<div class="card__img" style="background-image:url(img/8.jpg)"></div>
+						<h3 class="card__title">AI Visionary</h3>
+						<h4 class="card__subtitle">Envisioning Tomorrow</h4>
+						<span class="card__meta">V8.0</span>
+						<p class="card__description">Embrace the visionary realm of AI, where dreams of the future become the reality of today.</p>
+					</div><!-- /card -->
+					<div class="card">
+						<div class="card__img" style="background-image:url(img/9.jpg)"></div>
+						<h3 class="card__title">AI Odyssey</h3>
+						<h4 class="card__subtitle">Journey to Tomorrow</h4>
+						<span class="card__meta">V9.0</span>
+						<p class="card__description">Embark on an epic odyssey through the realms of AI, where innovation knows no bounds.</p>
+					</div><!-- /card -->
+				</div>
+			</div>
+			<h2 class="section-title">A New Frontier</h2>
+			<div class="wrap">
+				<div data-stack-1 class="wrap__inner">
+					<div class="content content--1">
+						<div class="card">
+							<div class="card__img" style="background-image:url(img/1.jpg)"></div>
+						</div><!-- /card -->
+						<div class="card">
+							<div class="card__img" style="background-image:url(img/2.jpg)"></div>
+						</div><!-- /card -->
+						<div class="card">
+							<div class="card__img" style="background-image:url(img/3.jpg)"></div>
+						</div><!-- /card -->
+						<div class="card">
+							<div class="card__img" style="background-image:url(img/4.jpg)"></div>
+						</div><!-- /card -->
+						<div class="card">
+							<div class="card__img" style="background-image:url(img/5.jpg)"></div>
+						</div><!-- /card -->
+						<div class="card">
+							<div class="card__img" style="background-image:url(img/6.jpg)"></div>
+						</div><!-- /card -->
+						<div class="card">
+							<div class="card__img" style="background-image:url(img/7.jpg)"></div>
+						</div><!-- /card -->
+						<div class="card">
+							<div class="card__img" style="background-image:url(img/8.jpg)"></div>
+						</div><!-- /card -->
+						<div class="card">
+							<div class="card__img" style="background-image:url(img/9.jpg)"></div>
+						</div><!-- /card -->
+						<div class="card">
+							<div class="card__img" style="background-image:url(img/1.jpg)"></div>
+						</div><!-- /card -->
+						<div class="card">
+							<div class="card__img" style="background-image:url(img/2.jpg)"></div>
+						</div><!-- /card -->
+						<div class="card">
+							<div class="card__img" style="background-image:url(img/3.jpg)"></div>
+						</div><!-- /card -->
+						<div class="card">
+							<div class="card__img" style="background-image:url(img/4.jpg)"></div>
+						</div><!-- /card -->
+						<div class="card">
+							<div class="card__img" style="background-image:url(img/5.jpg)"></div>
+						</div><!-- /card -->
+						<div class="card">
+							<div class="card__img" style="background-image:url(img/6.jpg)"></div>
+						</div><!-- /card -->
+						<div class="card">
+							<div class="card__img" style="background-image:url(img/7.jpg)"></div>
+						</div><!-- /card -->
+						<div class="card">
+							<div class="card__img" style="background-image:url(img/8.jpg)"></div>
+						</div><!-- /card -->
+						<div class="card">
+							<div class="card__img" style="background-image:url(img/9.jpg)"></div>
+						</div><!-- /card -->
+						<div class="card">
+							<div class="card__img" style="background-image:url(img/1.jpg)"></div>
+						</div><!-- /card -->
+						<div class="card">
+							<div class="card__img" style="background-image:url(img/2.jpg)"></div>
+						</div><!-- /card -->
+						<div class="card">
+							<div class="card__img" style="background-image:url(img/3.jpg)"></div>
+						</div><!-- /card -->
+						<div class="card">
+							<div class="card__img" style="background-image:url(img/4.jpg)"></div>
+						</div><!-- /card -->
+						<div class="card">
+							<div class="card__img" style="background-image:url(img/5.jpg)"></div>
+						</div><!-- /card -->
+						<div class="card">
+							<div class="card__img" style="background-image:url(img/6.jpg)"></div>
+						</div><!-- /card -->
+						<div class="card">
+							<div class="card__img" style="background-image:url(img/7.jpg)"></div>
+						</div><!-- /card -->
+						<div class="card">
+							<div class="card__img" style="background-image:url(img/8.jpg)"></div>
+						</div><!-- /card -->
+						<div class="card">
+							<div class="card__img" style="background-image:url(img/9.jpg)"></div>
+						</div><!-- /card -->
+					</div>
+				</div>
+			</div>
+			<h2 class="section-title">Chronicles of Circuitry</h2>
+			<div class="wrap">
+				<div data-stack-2 class="wrap__inner">
+					<div class="content content--2">
+						<div class="card">
+							<div class="card__img" style="background-image:url(img/1.jpg)"></div>
+						</div><!-- /card -->
+						<div class="card">
+							<div class="card__img" style="background-image:url(img/2.jpg)"></div>
+						</div><!-- /card -->
+						<div class="card">
+							<div class="card__img" style="background-image:url(img/3.jpg)"></div>
+						</div><!-- /card -->
+						<div class="card">
+							<div class="card__img" style="background-image:url(img/4.jpg)"></div>
+						</div><!-- /card -->
+						<div class="card">
+							<div class="card__img" style="background-image:url(img/5.jpg)"></div>
+						</div><!-- /card -->
+						<div class="card">
+							<div class="card__img" style="background-image:url(img/6.jpg)"></div>
+						</div><!-- /card -->
+						<div class="card">
+							<div class="card__img" style="background-image:url(img/7.jpg)"></div>
+						</div><!-- /card -->
+						<div class="card">
+							<div class="card__img" style="background-image:url(img/8.jpg)"></div>
+						</div><!-- /card -->
+						<div class="card">
+							<div class="card__img" style="background-image:url(img/9.jpg)"></div>
+						</div><!-- /card -->
+						<div class="card">
+							<div class="card__img" style="background-image:url(img/1.jpg)"></div>
+						</div><!-- /card -->
+						<div class="card">
+							<div class="card__img" style="background-image:url(img/2.jpg)"></div>
+						</div><!-- /card -->
+						<div class="card">
+							<div class="card__img" style="background-image:url(img/3.jpg)"></div>
+						</div><!-- /card -->
+						<div class="card">
+							<div class="card__img" style="background-image:url(img/4.jpg)"></div>
+						</div><!-- /card -->
+						<div class="card">
+							<div class="card__img" style="background-image:url(img/5.jpg)"></div>
+						</div><!-- /card -->
+						<div class="card">
+							<div class="card__img" style="background-image:url(img/6.jpg)"></div>
+						</div><!-- /card -->
+						<div class="card">
+							<div class="card__img" style="background-image:url(img/7.jpg)"></div>
+						</div><!-- /card -->
+						<div class="card">
+							<div class="card__img" style="background-image:url(img/8.jpg)"></div>
+						</div><!-- /card -->
+						<div class="card">
+							<div class="card__img" style="background-image:url(img/9.jpg)"></div>
+						</div><!-- /card -->
+						<div class="card">
+							<div class="card__img" style="background-image:url(img/1.jpg)"></div>
+						</div><!-- /card -->
+						<div class="card">
+							<div class="card__img" style="background-image:url(img/2.jpg)"></div>
+						</div><!-- /card -->
+						<div class="card">
+							<div class="card__img" style="background-image:url(img/3.jpg)"></div>
+						</div><!-- /card -->
+						<div class="card">
+							<div class="card__img" style="background-image:url(img/4.jpg)"></div>
+						</div><!-- /card -->
+						<div class="card">
+							<div class="card__img" style="background-image:url(img/5.jpg)"></div>
+						</div><!-- /card -->
+						<div class="card">
+							<div class="card__img" style="background-image:url(img/6.jpg)"></div>
+						</div><!-- /card -->
+						<div class="card">
+							<div class="card__img" style="background-image:url(img/7.jpg)"></div>
+						</div><!-- /card -->
+						<div class="card">
+							<div class="card__img" style="background-image:url(img/8.jpg)"></div>
+						</div><!-- /card -->
+						<div class="card">
+							<div class="card__img" style="background-image:url(img/9.jpg)"></div>
+						</div><!-- /card -->
+					</div>
+				</div>
+			</div>
+			<h2 class="section-title">Synthetica Sapiens</h2>
+			<div class="wrap">
+				<div data-stack-3 class="wrap__inner">
+					<div class="content content--3">
+						<div class="card">
+							<div class="card__img" style="background-image:url(img/1.jpg)"></div>
+						</div><!-- /card -->
+						<div class="card">
+							<div class="card__img" style="background-image:url(img/2.jpg)"></div>
+						</div><!-- /card -->
+						<div class="card">
+							<div class="card__img" style="background-image:url(img/3.jpg)"></div>
+						</div><!-- /card -->
+						<div class="card">
+							<div class="card__img" style="background-image:url(img/4.jpg)"></div>
+						</div><!-- /card -->
+						<div class="card">
+							<div class="card__img" style="background-image:url(img/5.jpg)"></div>
+						</div><!-- /card -->
+						<div class="card">
+							<div class="card__img" style="background-image:url(img/6.jpg)"></div>
+						</div><!-- /card -->
+						<div class="card">
+							<div class="card__img" style="background-image:url(img/7.jpg)"></div>
+						</div><!-- /card -->
+						<div class="card">
+							<div class="card__img" style="background-image:url(img/8.jpg)"></div>
+						</div><!-- /card -->
+						<div class="card">
+							<div class="card__img" style="background-image:url(img/9.jpg)"></div>
+						</div><!-- /card -->
+						<div class="card">
+							<div class="card__img" style="background-image:url(img/1.jpg)"></div>
+						</div><!-- /card -->
+						<div class="card">
+							<div class="card__img" style="background-image:url(img/2.jpg)"></div>
+						</div><!-- /card -->
+						<div class="card">
+							<div class="card__img" style="background-image:url(img/3.jpg)"></div>
+						</div><!-- /card -->
+						<div class="card">
+							<div class="card__img" style="background-image:url(img/4.jpg)"></div>
+						</div><!-- /card -->
+						<div class="card">
+							<div class="card__img" style="background-image:url(img/5.jpg)"></div>
+						</div><!-- /card -->
+						<div class="card">
+							<div class="card__img" style="background-image:url(img/6.jpg)"></div>
+						</div><!-- /card -->
+						<div class="card">
+							<div class="card__img" style="background-image:url(img/7.jpg)"></div>
+						</div><!-- /card -->
+						<div class="card">
+							<div class="card__img" style="background-image:url(img/8.jpg)"></div>
+						</div><!-- /card -->
+						<div class="card">
+							<div class="card__img" style="background-image:url(img/9.jpg)"></div>
+						</div><!-- /card -->
+						<div class="card">
+							<div class="card__img" style="background-image:url(img/1.jpg)"></div>
+						</div><!-- /card -->
+						<div class="card">
+							<div class="card__img" style="background-image:url(img/2.jpg)"></div>
+						</div><!-- /card -->
+						<div class="card">
+							<div class="card__img" style="background-image:url(img/3.jpg)"></div>
+						</div><!-- /card -->
+						<div class="card">
+							<div class="card__img" style="background-image:url(img/4.jpg)"></div>
+						</div><!-- /card -->
+						<div class="card">
+							<div class="card__img" style="background-image:url(img/5.jpg)"></div>
+						</div><!-- /card -->
+						<div class="card">
+							<div class="card__img" style="background-image:url(img/6.jpg)"></div>
+						</div><!-- /card -->
+						<div class="card">
+							<div class="card__img" style="background-image:url(img/7.jpg)"></div>
+						</div><!-- /card -->
+						<div class="card">
+							<div class="card__img" style="background-image:url(img/8.jpg)"></div>
+						</div><!-- /card -->
+						<div class="card">
+							<div class="card__img" style="background-image:url(img/9.jpg)"></div>
+						</div><!-- /card -->
+					</div>
+				</div>
+			</div>
+			<section class="outro">
+				<h2 class="outro__title">More you might like</h2>
+				<div class="card-wrap">
+				  <div class="card card--rel">
+					<a href="https://tympanus.net/codrops/2023/11/29/3d-glass-portal-card-effect-with-react-three-fiber-and-gaussian-splatting/" class="card__img" style="background-image: url(https://tympanus.net/codrops/wp-content/uploads/2023/11/glass3d.2023-11-28-14_27_25.gif);"></a>
+					<h3 class="card__title">
+					  <a href="https://tympanus.net/codrops/2023/11/29/3d-glass-portal-card-effect-with-react-three-fiber-and-gaussian-splatting/">3D Glass Portal Card Effect with React Three Fiber and Gaussian Splatting</a>
+					</h3>
+				  </div>
+				  <div class="card card--rel">
+					<a href="https://tympanus.net/Development/OnScrollColumnsRows/" class="card__img" style="
+						background-image: url(https://tympanus.net/codrops/wp-content/uploads/2023/08/OnScrollColumns.jpg?x11185);
+					  "></a>
+					<h3 class="card__title">
+					  <a href="https://tympanus.net/Development/OnScrollColumnsRows/">On-Scroll Column & Row Animations</a>
+					</h3>
+				  </div>
+				</div>
+			</section>
+			<p class="credits">Made by <a href="https://twitter.com/codrops">@codrops</a></p>
+		</main>
+		
+		<script src="https://tympanus.net/codrops/adpacks/cda_sponsor.js"></script>
+		<script src="js/gsap.min.js"></script>
+		<script src="js/ScrollTrigger.min.js"></script>
+		
+		<!-- Image preloader -->
+		<script src="js/imagesloaded.pkgd.min.js"></script>
+		
+		<!-- Remove the following two lines if you don't want smooth scrolling -->
+		<script src="js/lenis.js"></script>
+		<script src="js/smoothscroll.js"></script>
+		<script type="module" src="js/index.js"></script>
+	</body>
+</html>
